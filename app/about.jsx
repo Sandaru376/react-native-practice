@@ -1,27 +1,46 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { Link } from 'expo-router'
+import React from 'react';
+import { StyleSheet } from 'react-native';
+import { Link } from 'expo-router';
+
+import ThemedView from '../components/ThemedView';
+import ThemeText from '../components/ThemeText';
+import Spacer from '../components/Speacer';
 
 const About = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>About</Text>
-      <Link href="/"> Go to Home </Link>
-    </View>
-  )
-}
+    <ThemedView style={styles.container}>
+      <ThemeText style={styles.title} title>
+        About
+      </ThemeText>
 
-export default About
+      <Spacer height={20} />
+
+      <ThemeText>
+        This is the about page of the app.
+      </ThemeText>
+
+      <Spacer height={30} />
+
+      <Link href="/">
+        <ThemeText>
+          Go to Home
+        </ThemeText>
+      </Link>
+    </ThemedView>
+  );
+};
+
+export default About;
 
 const styles = StyleSheet.create({
-     container: {
+  container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  title:{
+
+  title: {
     fontSize: 24,
     fontWeight: 'bold',
-
-  }
-})
+  },
+});
