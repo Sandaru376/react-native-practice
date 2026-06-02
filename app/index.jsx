@@ -2,10 +2,14 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 import { Link } from 'expo-router';
 
+import login from './(auth)/login';
+import register from './(auth)/register';
+
+
 import ThemedView from '../components/ThemedView';
 import ThemeLogo from '../components/ThemeLogo';
 import ThemeText from '../components/ThemeText';
-import Spacer from '../components/Speacer';
+import Spacer from '../components/Spacer';
 
 const Home = () => {
   return (
@@ -16,6 +20,8 @@ const Home = () => {
           height: 150,
         }}
       />
+
+
 
       <ThemeText style={styles.text} title>
         Home
@@ -29,9 +35,16 @@ const Home = () => {
 
       <Spacer />
 
-      <Link href="/about">
+      <Link href="/login">
         <ThemeText>
-          Go to About
+          Go to Login
+        </ThemeText>
+      </Link>
+
+      
+      <Link href="/register">
+        <ThemeText>
+          Go to Register
         </ThemeText>
       </Link>
     </ThemedView>

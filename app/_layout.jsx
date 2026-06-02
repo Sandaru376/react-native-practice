@@ -1,9 +1,8 @@
-import React from 'react';
 import { Stack } from 'expo-router';
 import { useColorScheme } from 'react-native';
 import { Colors } from '../constants/Colors';
 
-const RootLayout = () => {
+export default function RootLayout() {
   const colorScheme = useColorScheme();
   const theme = Colors[colorScheme] ?? Colors.light;
 
@@ -18,15 +17,17 @@ const RootLayout = () => {
     >
       <Stack.Screen
         name="index"
-        options={{ headerTitle: 'Home' }}
+        options={{
+          title: 'Home',
+        }}
       />
 
       <Stack.Screen
-        name="about"
-        options={{ headerTitle: 'About' }}
+        name="(auth)"
+        options={{
+          headerShown: false,
+        }}
       />
     </Stack>
   );
-};
-
-export default RootLayout;
+}
