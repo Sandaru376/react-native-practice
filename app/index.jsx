@@ -47,6 +47,13 @@ const Home = () => {
           Go to Register
         </ThemeText>
       </Link>
+
+          <Link href="/profile">
+        <ThemeText>
+          Go to Register
+        </ThemeText>
+      </Link>
+
     </ThemedView>
   );
 };
